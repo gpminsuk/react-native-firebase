@@ -65,6 +65,9 @@
     // TODO in a later version allow customising completion options in JS code
     completionHandler(UNNotificationPresentationOptionNone);
   }
+  else {
+    completionHandler(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge);
+  }
 }
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
